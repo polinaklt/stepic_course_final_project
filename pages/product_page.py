@@ -7,6 +7,8 @@ from selenium.webdriver.common.by import By
 from .locators import ProductPageLocators
 
 
+
+
 class ProductPage(BasePage):
     def press_add_to_basket_button(self):
         add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
