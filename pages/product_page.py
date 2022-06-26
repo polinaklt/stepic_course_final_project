@@ -1,19 +1,11 @@
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException
-from selenium.webdriver.support.wait import WebDriverWait
-
 from .base_page import BasePage
-from selenium.webdriver.common.by import By
 from .locators import ProductPageLocators
-
-
 
 
 class ProductPage(BasePage):
     def press_add_to_basket_button(self):
         add_to_basket_button = self.browser.find_element(*ProductPageLocators.ADD_TO_BASKET_BUTTON)
         add_to_basket_button.click()
-        self.solve_quiz_and_get_code()
 
     def check_added_book_name(self):
         book_name_element = self.browser.find_element(*ProductPageLocators.BOOK_NAME)
