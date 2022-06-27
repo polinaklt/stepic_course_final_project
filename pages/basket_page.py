@@ -1,8 +1,5 @@
-from selenium.webdriver.support import expected_conditions as EC
-from selenium.common.exceptions import TimeoutException, NoSuchElementException
-from selenium.webdriver.support.wait import WebDriverWait
 from .locators import BasketPageLocators
-from pages.base_page import BasePage
+from .pages.base_page import BasePage
 
 
 class BasketPage(BasePage):
